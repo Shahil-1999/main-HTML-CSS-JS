@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intraction </title>
+</head>
+<body>
+    <script>
+        //Alert in JS dosent return anything(give alert to user when you have to only tell the user that this happened like subscription has been expired and then only click "okay" they won't have any other option)
+        // alert("Your Subscription has been Expired")
+
+        // let a = prompt("What is your name?")   //First arguement is message  any message you want to display and second you give is default arguement.
+        // console.log(a) 
+
+
+        //Confirm is used when u deleting a file or u doing something in which u have to give warning to the user.(for double checking we use confirm)
+        let deletePost = confirm("Do you really want to delete this post");
+        if(deletePost){
+            //code to delete the post
+            console.log("Your post has been deleted sucessfully");
+        }
+        else{
+            //code to cancel deletion of the post
+            console.log("Your post has not been deleted");
+        }
+    </script>
+</body>
+</html>

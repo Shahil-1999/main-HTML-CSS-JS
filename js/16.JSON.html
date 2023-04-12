@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <div class="container">
+        This is JSON
+    </div>
+
+    <script>
+        let json1 = {
+            name: "Shahil",
+            salary: 2,
+            course: "MCA",
+            college: "Gurunanak Institute of Technology"
+        }
+        console.log(json1); //this is object
+
+
+        //convert JSON to String
+        let strjson = JSON.stringify(json1);
+        console.log(strjson);
+
+        // We want to change course or any other value then we use replace, replace takes 2 values first is which value you want to changge and second is what value u want.(replace function not work on JSON)
+        let rep = strjson.replace("MCA", "BCA")
+        console.log(rep);
+
+        //Convert String to JSON
+        let json2 = JSON.parse(strjson)
+        console.log(json2);
+    </script>
+</body>
+</html>

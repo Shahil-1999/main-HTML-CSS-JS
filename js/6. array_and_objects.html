@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <div class="container">simple si html</div>
+    <script>
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        // Objects:
+
+        let employee = {
+            name: "Harry",
+            salary: 10, 
+            channel: "CodeWithHarry",
+            "channel 2": "ProgrammingWithHarry", //if you want space in your key then write in double quotes("")  
+        }
+        console.log(employee);
+        console.log(employee.salary)    //(I want to search key salary which contain any spaces)
+        console.log(employee['channel 2'])   //(I want to search key salary which contain spaces)
+
+        // Arrays:
+
+        let names = [1, 2, 4, "Harry", undefined];
+        // let names = new Array(41, 2, 4, "Harry", undefined);
+        // let names = new Array(23);   //it will create an array 23 empty element array
+        // console.log(names.length);
+        // names = names.sort();
+
+        // push new elements
+        names.push("this is pushed");
+        console.log(names);
+
+        //pop last elements
+        names.pop()
+        console.log(names);
+
+        //Shift
+        names.shift()   //removes first elements
+        console.log(names);
+
+        //unshift
+        names.unshift(96)   //add elements at the beginning
+        console.log(names);
+
+        //delete
+        let p = [1, 6, 8]
+        delete p[1]    //delete the particular elements and dosent affect the length of an array
+        console.log(p);
+
+        //Concatinate 
+        let c = [11, 12, 15]
+        let d = [21, 22, 25]
+        let e = c.concat(d) // returns new array dosen't change existing array
+        console.log(e);
+
+        //sort
+        let f = [5, 9, 1]
+        console.log(f.sort());  //sort the array
+
+
+        //slice
+        // slice(starting index, ending index)
+        let g = [1, 5, 9, 8, 6, 7]
+        let h = g.slice(1,g.length) //slice the array
+        console.log(h);
+
+
+        //Splice (Used to add array elements)
+        // splice(position to add, number of elements to be remove, elements to be added)
+        let j = [1, 9, 21, 31, 88, 90]
+        j.splice(1,3,100,500,600)
+        console.log(j);
+
+        let x = [1, 6, 8];
+        let y = x.join("-")  //join array elements with "-"
+        console.log(y);
+    </script>
+</body>
+</html>

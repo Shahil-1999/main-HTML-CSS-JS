@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+        let main = document.getElementById('main'); //By writing getElementById, we can target the HTML through its id.We can access main id now.
+        console.log(main);
+        let nav = document.getElementById('nav');
+        console.log(nav);
+
+        let containers = document.getElementsByClassName('container');  // If we want to find all the elements with same class name, use getElementsByClassName(). 
+
+        console.log(containers);
+
+        let sel = document.querySelector('#nav>li'); //If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelector()  method It returns only first elements.
+
+        console.log("Selector returns ", sel)
+
+        let sel1 = document.querySelectorAll('#nav>li'); //We can use all the selectors that we have learned till now. We can also use querySelectorAll() to target the elements It returns All elements.
+
+        console.log("Selector returns ", sel1)
+
+    </script>
+</body>
+</html>
+
+<!-- The easiest way to get the content of an element is by using the innerHTML property. -->

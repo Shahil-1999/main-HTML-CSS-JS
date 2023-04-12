@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Display property</title>
+    <style> 
+
+        *{
+            box-sizing: border-box;
+        }
+        header {
+            border: 2px solid red;
+            margin: auto;   /*margin auto can do by giving equal margin to left and right it center the elements.*/
+            width: 1200px; /*header is a bloack elements that why we are able to set width, we are cant set with in inline (see line 83)*/
+        }
+
+        img {
+            margin: auto;
+            display: block; /*img is a inline it take only place that it wants, so first we will block display after that it stark taking all places like block elements after that we will able to set margin auto*/
+            width: 134px;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+        }
+
+        .box {
+            border: 4px solid black;
+            background-color: grey;
+            margin: 4px 0px;
+            padding: 23px;
+            width: 33%;
+            box-sizing: border-box; /* ur total width as much as u gave it including margin and padding. or else the margin and padding that will change your width*/
+            display: inline-block;
+             
+        }
+        .container{
+            margin: auto;
+            width: 1200px;
+        }
+        .heading{
+            
+            /* display: inline-block; */
+            border: 2px solid red;
+            text-align: center;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <img src="data:image/jpeg;base64,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" alt="">
+        <h3>Welcome to Shahil's Blog</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum ipsam aliquid deleniti, vitae
+                labore cum laudantium a blanditiis est voluptates dolorum consequuntur. Aliquam corporis, fuga
+                consectetur rerum molestias consequatur tempora natus sed laborum recusandae fugit harum soluta
+                inventore enim. Aspernatur aperiam cum reprehenderit!</p>
+        </div>
+        
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum ipsam aliquid deleniti, vitae
+                labore cum laudantium a blanditiis est voluptates dolorum consequuntur. Aliquam corporis, fuga
+                consectetur rerum molestias consequatur tempora natus sed laborum recusandae fugit harum soluta
+                inventore enim. Aspernatur aperiam cum reprehenderit!</p>
+        </div>
+        
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum ipsam aliquid deleniti, vitae
+                labore cum laudantium a blanditiis est voluptates dolorum consequuntur. Aliquam corporis, fuga
+                consectetur rerum molestias consequatur tempora natus sed laborum recusandae fugit harum soluta
+                inventore enim. Aspernatur aperiam cum reprehenderit!</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<!-- img is a inline elements means it will take only space itself
+and h3,header etc. is a block elements it will take full space. and throw elements in next line -->
+
+<!-- display block means, this is a full block by taking full block full width it will sit over here, if i do display inline then it means that it will just take as much place as it required.-->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid </title>
+    <style>
+    .container{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        'navbar navbar navbar navbar' /*This will be a navbar the entire space will be surrounded by the navbar*/
+        'section section section aside'   /*This will be asection and aside first three space surrounded by a secton and 1 space for aside*/
+        'footer footer footer footer ';
+    }
+    .item{
+        background-color: yellow;
+        border: 3px solid black;
+        padding: 12px 23px;
+    }
+    #navbar{
+        grid-area: navbar;
+    }
+    #section{
+        grid-area: section;
+    }
+    #aside{
+        grid-area: aside;
+    }
+   footer{
+        grid-area: footer;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+
+            navbar navbar
+        </div>
+        <div id="section" class="item">
+            section
+        </div>
+        <div id="aside" class="item">
+            aside
+        </div>
+        <footer class="item">footer</footer>
+        
+    </div>
+</body>
+</html>

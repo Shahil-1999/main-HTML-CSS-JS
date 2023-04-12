@@ -1,0 +1,40 @@
+#capitalize{
+    text-transform: capitalize; /*Every First word captialize*/
+    margin: 20px;
+    padding: 20px;
+    
+    
+}
+#spacing_lowercase{
+    text-transform:lowercase;   /*Every First word in lowercase*/
+    letter-spacing: 5px;    /*Space between every letter*/
+    margin: 20px;
+    padding: 20px;
+}
+#outline{
+    outline: 4px dashed red;
+    
+    margin: 20px;
+    padding: 20px;
+    
+    text-transform: uppercase;  /*Every First word in uppercase*/
+    margin: 20px;
+    padding: 20px;
+}
+#line_through{
+    text-decoration: line-through;
+    margin: 20px;
+    padding: 20px;
+}
+#TDThickness{
+    text-decoration-line:underline;    /*for text decoration*/
+    text-decoration-thickness: 7px;    /*for text decoration underline thickness*/
+    margin: 20px;
+    padding: 20px;
+
+}
+#shadow{
+    text-shadow: 2px 2px;
+    margin: 20px;
+    padding: 20px;
+}

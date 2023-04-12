@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Arrow function</h1>
+    </div>
+
+
+    <script>
+        // normal function
+        function greet() {
+            console.log("Normal Function") ;   
+        }
+        greet();
+
+        //Arrow Function
+        let greet1 =() => {
+            console.log("Arrow Function")
+        }
+        greet1();
+
+        //shortcut of arrow function 
+        let greet3 = () => console.log('Good morning');
+
+        //We will get the same output as the above after executing this code. This function can also be used with the setTimeout() 
+        setTimeout(() => {
+            console.log("We Are Inside SetTimeOut");
+        }, 3000);
+
+
+        //We can also simply add the two numbers with the arrow functions
+        let sum = (a,b) => (a+b);
+        console.log("sum is : ",sum(5,4));
+
+        //If we have any single variable in our code, then we don’t need to put any braces also. 
+        let half = a => a/2;
+        console.log("Half is: ",half(45));
+
+
+        //If we make the object obj1 and an array of names and then make a function as speak
+
+
+        let obj1={
+        names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log("Kukdoo Koo " + student);
+            });
+        }
+    }
+    obj1.speak();
+
+
+
+
+        let obj2={greeting: "Good Morning",
+        names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log(this.greeting + " Kukdoo Koo " + student);
+            });
+        }
+    }
+    obj2.speak();
+
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>

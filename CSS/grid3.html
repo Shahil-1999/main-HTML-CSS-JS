@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        /* To make it look better, we can add a grid-gap in the grid. We can add two types of grid gaps in our grid; one for rows and other for columns */
+        grid-column-gap: 7rem;
+        grid-row-gap: 1rem;
+        
+        
+
+    }
+    .box{
+        border: 2px solid black;
+        background-color: rgb(228, 188, 228);
+        padding: 23px;
+    }
+    .box:first-child{
+        /* we want to merge item 1,2,6,7 */
+        /* it has span 2 columns and same as row*/
+        /* grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3; */
+
+        /* shortcut of grid start and end */
+        /* it span 3 boxes 1,2,3 same as row */
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">this is box-1</div>
+        <div class="box">this is box-2</div>
+        <div class="box">this is box-3</div>
+        <div class="box">this is box-4</div>
+        <div class="box">this is box-5</div>
+        <div class="box">this is box-6</div>
+        <div class="box">this is box-7</div>
+        <div class="box">this is box-8</div>
+        <div class="box">this is box-9</div>
+        <div class="box">this is box-10</div>
+        <div class="box">this is box-11</div>
+        <div class="box">this is box-12</div>
+        <div class="box">this is box-13</div>
+        <div class="box">this is box-14</div>
+        <div class="box">this is box-15</div>
+        <div class="box">this is box-16</div>
+        <div class="box">this is box-17</div>
+        <div class="box">this is box-18</div>
+        <div class="box">this is box-19</div>
+        <div class="box">this is box-20</div>
+    </div>
+</body>
+</html>

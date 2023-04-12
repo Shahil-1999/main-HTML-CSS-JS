@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Filter reduce</title>
+</head>
+<body>
+
+    <script>
+        //map(returns new array but for each dosent make new array)
+
+        let arr = [1, 25, 69, 98]
+        let nArr = arr.map((value, index, array)=>{
+            console.log(value, index, array);
+        })
+
+
+        //filter (Filter an array with values that passes a test creates a new array)
+        let arr1 = [11, 125, 169, 198]
+        let nArr1 = arr1.filter((value)=>{
+            return value<150
+        })
+        console.log(nArr1);
+
+
+        //reduce 
+        let arr3 = [1,5,2,3,4]
+        let nArr3 = arr3.reduce((result, result1)=>{
+            return result * result1 // takes 2 elements and multiply them after that the resultant value multiply with 3rd elements an so on..you perform any operation like add, subtract etc.)
+        })
+        console.log(nArr3);
+
+
+    
+        
+
+        
+       
+
+
+
+
+        
+       
+    </script>
+    
+</body>
+</html>

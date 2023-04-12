@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Minimum</h1>
+    <h1>Maximum</h1>
+    <script>
+        function minimum(a, b){
+            if(a > b){
+                return b
+            }
+            else{
+                return a
+            }
+        }
+        let minFirstNum = 30;
+        let minSecondNum = 90;
+        let min = minimum(minFirstNum, minSecondNum);
+        console.log("Minimum is " + min)
+
+
+
+        function maximum(a, b){
+            if(a < b){
+                return b
+            }
+            else{
+                return a
+            }
+        }
+        let maxFirstNum = 40;
+        let maxSecondNum = 50;
+        let max = maximum(maxFirstNum, maxSecondNum);
+        console.log("Maximum is " + max)
+    </script>
+</body>
+</html>

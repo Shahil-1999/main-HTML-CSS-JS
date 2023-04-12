@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function greet(name, greetings = "Greetings from JS") {   //"(greetings="Greetings from Js)" this will be a default value of greetings. Suppose you gave name3 but not greet1 then it will take greeting's default value automatically..
+
+            console.log(greetings + " " + name);
+            console.log(name + " is a good boy");
+        }
+
+        let name = "Shahil" 
+        let name1 = "Shirsha"
+        let name2 = "Mujahid"
+        let name3 = "Sonu"
+        let greet1 = "Good Morning"
+
+        greet(name, greet1) //when this has been called, greet so it will bring tha value 'shahil' in the place of name, and 'good morning' in the place of greet1..And shahil give to this name to function's 'name' and same goes with greet..And after that the function which will run
+        greet(name1, greet1)
+        greet(name2, greet1)
+        greet(name3)
+
+
+
+        // Return Value
+        function sum(a,b,c) {
+            let d = a + b + c;
+            return d;
+            console.log("Function is returned");    //if you have written anything after return in function then it will be not executed (Unreachable Code)...
+            
+        }
+        
+        let returnVal = sum(1,2,3);
+        console.log(returnVal)
+        // console.log(sum(1,2,3)) //alternate 
+    </script>
+</body>
+</html>
