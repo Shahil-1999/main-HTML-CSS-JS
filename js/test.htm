@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script>
         let a = "shahil";
         // for(tr of a){
         //     console.log(tr);
         // }
 
-      
-        let x = [1,9,8,60]
-        for(q of x){
+
+        let x = [1, 9, 8, 60]
+        for (q of x) {
             console.log(q);
         }
+
+
+
+        let arr1 = [1, 25, 69, 98]
+        let arr2 = [2, 5, 6, 7, 8]
+
+        let addition = arr1.map((values, index) => {
+            return values + arr2[index]
+        })
+        console.log(addition)
+
+        
+        let ball = {
+            shahil : "apple",
+            seeroo : "orange",
+            muzoo: "banana"
+        }
+        for(elem in ball)
+        console.log(elem, ball[elem]);
+
         
 
-  
+
+
     </script>
 </body>
+
 </html>

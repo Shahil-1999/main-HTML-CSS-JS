@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+0/,<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,20 +13,23 @@
 
         let arr = [1, 25, 69, 98]
         let nArr = arr.map((value, index, array)=>{
-            console.log(value, index, array);
+            console.log(value, index, array);   //first parameter is for values inside arr , second parameter is for index number and third parameter is for whole array(same as for each loops the difference is that maps creates new array)
         })
+
+        
+
 
 
         //filter (Filter an array with values that passes a test creates a new array)
         let arr1 = [11, 125, 169, 198]
         let nArr1 = arr1.filter((value)=>{
-            return value<150
+            return value < 150
         })
         console.log(nArr1);
 
 
         //reduce 
-        let arr3 = [1,5,2,3,4]
+        let arr3 = [1, 5, 2, 3, 4]
         let nArr3 = arr3.reduce((result, result1)=>{
             return result * result1 // takes 2 elements and multiply them after that the resultant value multiply with 3rd elements an so on..you perform any operation like add, subtract etc.)
         })
