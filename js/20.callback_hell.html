@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back Hell</title>
+</head>
+<body>
+
+    <script>
+        // 1: 2s student roll number
+        // 2: 2s student name and age 
+        // 3: 2s gender
+
+        let roll = ( () =>{
+            setTimeout( () =>{
+                let roll_arr = [1, 2, 3, 4, 6]
+                console.log(`Student Roll number is ${roll_arr}`);
+
+                setTimeout( (roll_number) =>{
+                    let std_dict = {
+                        name : "Shahil",
+                        age : 24
+                    }
+                    console.log(`Student name is ${std_dict.name} and his roll number is ${roll_number} and his age is ${std_dict.age}`);
+
+
+                    setTimeout ( (stdName) =>{
+
+                        std_dict.gender = "male";
+                        console.log(`Gender of ${std_dict.name} is ${std_dict.gender}`);
+
+                    }, 2000, std_dict.name )
+
+
+                },2000, roll_arr[1]) // we want roll 2
+
+            }, 2000 )
+        } )
+        roll();
+    </script>
+    
+</body>
+</html>

@@ -9,16 +9,32 @@
 <body>
 
     <script>
-        let shahil = (person, Callback)=>{
-            console.log(`Good Morning ${person}`);
-            Callback();
+        // let shahil = (person, Callback)=>{
+        //     console.log(`Good Morning ${person}`);
+        //     Callback();
+        // }
+
+        // let shiwani = (personTwo)=>{
+        //     console.log(`Can I call You`);
+
+        // }
+        // shahil("Biswarup", shiwani)
+
+
+        let a = (set)=>{
+            setTimeout(() => {
+                console.log("inside set time out");
+                
+            }, 5000);
+            
         }
 
-        let shiwani = (personTwo)=>{
-            console.log(`Can I call You`);
-
+        let b = ()=>{
+            console.log("another");
         }
-        shahil("Biswarup", shiwani)
+        a();
+        b();
+
 
 
     </script>
