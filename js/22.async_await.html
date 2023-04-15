@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+
+    <script>
+        const obj = new Promise( (resolve, reject) =>{
+            setTimeout( () =>{
+                let arr = [1,2,3,4,45]
+                
+            resolve(arr)
+            reject("You Are rejected")
+            }, 2000 )
+
+        } )
+            const biodata = (indexno) =>{
+                return new Promise((resolve, reject) => {
+                    setTimeout( (indexno) =>{
+                        let data = {
+                        name : "Rakshandha dey",
+                        age : 24
+                    }
+                    resolve(`My Name is ${data.name} and my age is ${data.age} and my roll number is ${indexno}`)
+                    reject("Again You are rejected")
+                    },2000, indexno )
+                })
+            }
+
+      
+
+        // promise consume
+        async function getData(){
+            const result = await obj;
+            console.log(result);
+            const biodatas = await biodata(result[4])
+            console.log(biodatas);
+
+        }
+        
+        getData();
+        
+    </script>
+    
+</body>
+</html>

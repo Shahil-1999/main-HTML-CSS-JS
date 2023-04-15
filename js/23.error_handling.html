@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+        const rollObj = new Promise((resolve, reject) => {
+            setTimeout( () =>{
+                let roll = [1,2,3,4,6,5]
+                resolve(roll)
+            }, 2000 )
+        })
+
+        const bio = (indexRoll) => {
+            return new Promise((resolve, reject) => {
+                setTimeout( (indexRoll) =>{
+                    let bioObj = {
+                        name : "Shiwani",
+                        age : 25
+                    }
+                    resolve(`My name is ${bioObj.name}. My roll number is ${indexRoll} and my age is ${bioObj.age}`)
+                }, 2000, indexRoll )
+            })
+        }
+
+        //promice consume using async await
+        async function getDetails(){
+
+            try{
+
+                let roll_no = await rollObj
+                console.log(roll_no);
+    
+    
+                let fullBio = await bio(roll_no[2])
+                console.log(fullBio);
+            }
+            catch(err){
+                console.log(`The Error is ${err}`);
+            }
+
+
+        }
+
+        // If Your code is right then it will perform well , if there is any error then it will throw an error in the form of console or if u want to show an error in the form of alert then you definetly do that.
+        getDetails();
+    </script>
+    
+</body>
+</html>
