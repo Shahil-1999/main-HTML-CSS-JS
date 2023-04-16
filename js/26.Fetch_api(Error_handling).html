@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Error handling </title>
+</head>
+<body>
+    <input type="text" name="text" id="text" placeholder="Enter index">
+    <button id="btn">click</button>
+    <p id="abc"> </p>
+<script>
+
+document.getElementById("btn").addEventListener("click", function(){
+    console.log("clicking");
+  getJsondata()
+})
+    async function getJsondata(){
+
+        try {
+
+            const userInput = document.getElementById('text').value.toLowerCase()
+        
+
+        const data = await fetch('https://api.covid19api.com/summary');
+        const finalData = await data.json();
+ 
+
+        if (finalData && finalData.Countries.length){
+           
+            const countrydata = finalData.Countries;
+            countrydata.forEach(countryResp => {
+              
+                if (countryResp.Country.toLowerCase() == userInput){
+                    let difference = countryResp.TotalConfirmed - countryResp.TotalDeaths;
+                    const web = `Country Name is ${countryResp.Country} and Total covid Confirmed case is ${countryResp.TotalConfirmed} till ${countryResp.Date} and total Death case is ${countryResp.TotalDeaths} and difference between total case and deaths are ${difference} `;
+                    document.getElementById("abc").innerHTML = web
+
+                }
+                
+
+                
+            });
+            
+        }
+            
+        } catch (error) {
+            console.log(`The Error is: ${error}`);
+            
+        }
+        
+
+    }
+</script>
+    
+</body>
+</html>

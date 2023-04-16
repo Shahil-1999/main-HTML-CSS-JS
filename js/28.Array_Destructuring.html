@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+<body>
+    <script>
+
+        let prog = ['JavaScript', 'JQuery', 'Python', 'Node', 'Machine Learning'];
+        let [top1, top2, top3, top4, top5] = prog   //you can target any element of an array
+        console.log(`My Fav Programming language is ${top2}`);
+
+        let prog1 = ['JavaScript', 'JQuery', 'Python', 'Node', 'Machine Learning'];
+        // if you want to add 1st and 4th element
+        //let [top_1, top_5] = prog1   // this is wrong concept because this is array and array works on index number and here top_1 is index 0 which is JavaScript and top_2 is index 1 which is JQuery.
+        // console.log(top_1, top_5);
+
+
+        let [top_1,,,, top_5] = prog1  
+        console.log(top_1, top_5);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Using Promise</title>
+</head>
+<body>
+    <p id="abc"></p>
+
+    <script>
+        fetch('https://api.covid19api.com/summary').then( (apidata) =>{
+            // console.log(apidata);
+            return apidata.json();
+
+        } ).then( (actualdata) =>{
+
+            const finalData = actualdata.Countries[77];
+            console.log(finalData);
+            let difference = finalData.TotalConfirmed - finalData.TotalDeaths;
+            
+            const xyz = (`Country Name is ${finalData.Country} and Total covid Confirmed case is ${finalData.TotalConfirmed} till ${finalData.Date} and total Death case is ${finalData.TotalDeaths} and difference between total case and deaths are ${difference} `);
+
+            document.getElementById('abc').innerHTML = xyz;
+
+        } )
+    </script>
+    
+</body>
+</html>
